@@ -3,15 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-	behaviors {
-        btclck: bt_clck {
-            compatible = "zmk,behavior-mod-morph";
-            label = "bt_clck";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&bt BT_CLR>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_LCTL|MOD_LSFT)>;
-        };
-    };
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -36,7 +27,7 @@
 			bindings = <
 				&kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp  F8   &kp  F9 &kp  F10  &kp F11 &kp F12   &kp DEL &trans
 				&bt BT_SEL 0 &trans &kp UP &trans &bt BT_CLR &trans &trans &trans &kp INS &trans &kp PSCRN &kp SLCK &kp PAUSE_BREAK &reset
-				&bt_clck    &kp LEFT &kp DOWN &kp RIGHT &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT &trans &trans &trans &kp HOME  &kp PG_UP   &bootloader
+				&bt BT_SEL 1    &kp LEFT &kp DOWN &kp RIGHT &kp C_PREV &kp C_PLAY_PAUSE &kp C_NEXT &trans &trans &trans &kp HOME  &kp PG_UP   &bootloader
 				&bt BT_SEL 2 &kp C_PREV &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &trans &trans &kp C_EJECT &kp END &kp PG_DN  &kp UP
 				&bt BT_SEL 3 &trans  &trans              &trans                            &trans  &kp LEFT &kp DOWN &kp RIGHT
 			>;
